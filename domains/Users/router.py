@@ -1,7 +1,6 @@
 from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
 from database.connection import SessionLocal
-from domains.Users.service import get_users, create_user
 from domains.Users import service, schemas
 from core.security import get_current_user
 
