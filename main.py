@@ -3,8 +3,11 @@ from domains.Users import user_router
 from domains.SneakerModel import sneakerModel_router
 from database.init_db import init_db
 from fastapi.middleware.cors import CORSMiddleware
-
+from database.connection import Base, engine
 app = FastAPI()
+
+Base.metadata.create_all(bind=engine)
+
 
 origins = [ 
         "http://localhost:4200"

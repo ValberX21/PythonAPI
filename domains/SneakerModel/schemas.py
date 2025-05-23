@@ -28,7 +28,7 @@ class SneakerUpdate(BaseModel):
 
 
 class Sneaker(SneakerBase):
-    id: UUID
+    id: int
     created_at: datetime
     updated_at: datetime
 
