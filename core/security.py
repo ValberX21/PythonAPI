@@ -5,7 +5,6 @@ from fastapi.security import OAuth2PasswordBearer
 from jose import jwt, JWTError
 from cryptography.fernet import Fernet
 
-# Get environment variables safely
 SECRET_KEY = os.getenv("SECRETY_KEY")
 ALGORITHM = os.getenv("ALGORITHM", "HS256")
 ACCESS_TOKEN_EXPIRE_MINUTES = int(os.getenv("ACCESS_TOKEN_EXPIRE_MINUTES", 30))
