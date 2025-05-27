@@ -4,6 +4,7 @@ from domains.Order import Order_router
 from fastapi import FastAPI
 from domains.Users import user_router
 from domains.SneakerModel import sneakerModel_router
+from domains.Inventory  import inventory_router
 from database.init_db import init_db
 from fastapi.middleware.cors import CORSMiddleware
 from database.connection import Base, engine
@@ -30,6 +31,7 @@ init_db()
 app.include_router(user_router)
 app.include_router(sneakerModel_router)
 app.include_router(Order_router)
+app.include_router(inventory_router)
 
 @app.get("/")
 def read_root():

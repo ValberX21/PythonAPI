@@ -4,6 +4,7 @@ from uuid import UUID
 from datetime import datetime
 
 class SneakerBase(BaseModel):
+    id: Optional[int] = Field(None, example=1)
     model_name: str = Field(..., example="Air Max 90")
     sku: str = Field(..., example="AM90-BLK")
     sizes_available: List[int] = Field(..., example=[38, 39, 40, 41, 42])
